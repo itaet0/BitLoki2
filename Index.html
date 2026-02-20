@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BitLoki2</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>BitLoki2</h1>
+
+    <div class="card">
+        <h2>Encode</h2>
+
+        <label>Carrier PNG</label>
+        <input type="file" id="carrierInput" accept="image/png">
+        <div id="carrierInfo" class="fileInfo"></div>
+        <img id="carrierPreview" class="preview hidden">
+
+        <label>Secret File</label>
+        <input type="file" id="secretInput">
+        <div id="secretInfo" class="fileInfo"></div>
+        <img id="secretPreview" class="preview hidden">
+
+        <div id="capacityWarning" class="warning hidden"></div>
+
+        <button id="encodeBtn">Download Encoded Image</button>
+    </div>
+
+    <div class="card">
+        <h2>Decode</h2>
+
+        <input type="file" id="decodeInput" accept="image/png">
+        <div id="decodePreviewContainer" class="hidden">
+            <h3>Extracted File</h3>
+            <img id="decodedPreview" class="preview">
+            <a id="downloadDecoded" class="downloadBtn" download>Download File</a>
+        </div>
+
+        <button id="decodeBtn">Extract Hidden File</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
